@@ -1,0 +1,135 @@
+{{> head}}
+    {{> navbar }}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="row">
+				<div class="col-md-12">
+          <h2 class="text-white">Propietario</h2>
+				</div>
+        <div  class="col-md-12 bg-white text-dark"><h6 style="display:inline;">CI: </h6>43399220</div>
+        <div  class="col-md-12 bg-white text-dark"><h6 style="display:inline;">Nombre: </h6>German Da Rosa</div>
+        <div  class="col-md-12 bg-white text-dark"><h6 style="display:inline;">Direccion: </h6>Lorenzo Fernandez 5677</div>
+        <div class="col-md-6 bg-white text-dark"><h6 style="display:inline;">Dpto.: </h6>Montevideo</div><div class="col-md-6 bg-white text-dark"><h6 style="display:inline;">Secc.: 13 </h6></div>
+			  <div  class="col-md-12 bg-white text-dark"><h6 style="display:inline;">Pasaje: </h6>-</div>
+        <div  class="col-md-12 bg-white text-dark"><h6 style="display:inline;">Teléfono: </h6>099262662</div>
+      </div>
+			<div class="row">
+				<div class="col-md-12">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+				</div>
+				<div class="col-md-6">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="row">
+				<div class="col-md-12">
+          <h2>Paciente</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+				</div>
+				<div class="col-md-6">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+      {{> sangre }}
+		</div>
+		<div class="col-md-6">
+      {{> orina }}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+      {{> ecografia }}
+		</div>
+		<div class="col-md-6">
+      {{> electrocardiograma }}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+		</div>
+		<div class="col-md-6">
+		</div>
+	</div>
+</div>
+{{> footer}}
+<script>
+  //set button id on click to hide first modal
+  $("#solicitarSangre").on( "click", function() {
+        $('#preSangreModal').modal('hide');  
+  });
+  //trigger next modal
+  $("#solicitarSangre").on( "click", function() {
+        $('#sangreModal').modal('show');  
+  });
+</script>

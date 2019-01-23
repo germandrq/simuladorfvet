@@ -1,0 +1,45 @@
+<!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#preSangreModal">
+  Analisis de Sangre
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="preSangreModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+       
+        <h4 class="modal-title" id="preSangreModalLabel">Analsis de Sangre</h4>
+      </div>
+      
+      <div class="modal-body">
+        Aqui informacion sobre analisis para que sirven
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="solicitarSangre">Solicitar</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+      </div>
+        </form>
+    </div>
+  </div>
+</div>
+  
+  <!-- Modal -->
+<div class="modal fade" id="sangreModal" tabindex="-1" role="dialog" aria-labelledby="sangreLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+       
+        <h4 class="modal-title" id="sangreLabel">Resultados Analisís de Sangre</h4>
+      </div>
+      
+      <div class="modal-body">
+        <p>{{valorsangre}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Volver</button>
+      </div>
+        </form>
+    </div>
+  </div>
+</div>
