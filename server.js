@@ -110,24 +110,24 @@ app.get('/solicituddatos', function(req, res) {
 
 app.post('/solicituddatos', function(req, res) {
     let iterable = req.body.examenSangre;
-    var valorHemograma1 = "";
-    var valorGlicemia = "";
-    var valorColesterol = "";
-    for (const value of iterable) {
-        console.log(value);
-        if (value == "hemograma")
-            var valorHemograma1 = casoactual.examenSangre.hemograma;
-        else if (value == "glicemia")
-            valorGlicemia = casoactual.examenSangre.glicemia;
-        else if (value == "colesterol")
-            valorColesterol = casoactual.examenSangre.colesterol;
-        //comprobar si es hemograma> cargarlo y renderizarlo asi con todos los iterables
-        //aca le cargo con el valor correspondiente a la base de datos para el resultado final
-        //escribir en un json o mongo para despues solo llamar al objeto con todas las variables que fui agregando, 
+
+    //Acá podes agregar resultados, en base a variables
+
+    //es decir:
+    //resultadosX.push( casoactual.examenX[variable] ) siendo variable lo que te llega como parametro
+    var resultadosSangre = [];
+    for (let value of iterable) {
+        resultadosSangre.push({
+            name: value,
+            value: casoactual.examenSangre[value]
+        });
     }
-    //for (const value of iterable) {
-    //console.log(value);
-    //}
+
+    console.log(resultadosSangre);
+
+    //Guardar resultadosX en bd, para poder levantarlos cuando se precise
+
+
     res.render('simulador', {
         ci: casoactual.datosPropietario.ci,
         nombreDueno: casoactual.datosPropietario.nombreDueno,
@@ -147,8 +147,10 @@ app.post('/solicituddatos', function(req, res) {
         valorsangre: casoactual.analisis.sangre,
         valororina: casoactual.analisis.orina,
         valorecografia: casoactual.analisis.ecografia,
-        valorHemograma: valorHemograma1,
-        valorGlicemia: valorGlicemia,
-        valorColesterol: valorColesterol,
+        resultadosSangre: resultadosSangre
     });
 })
+
+
+//opcional generalizar resultadoX a resultados[X] siendo X el tipo de examen
+

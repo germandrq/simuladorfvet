@@ -8,23 +8,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Hemograma</td>
-      <td>{{valorHemograma}}</td>
-      <td>{{estadoHemograma}}</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Glicemia</td>
-      <td>{{valorGlicemia}}</td>
-      <td>{{estadoGlicemia}}</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Colesterol</td>
-      <td>{{valorColesterol}}</td>
-      <td>{{estadoColesterol}}</td>
-    </tr>
+    {{#each resultadosSangre}}
+        <tr>
+          <th scope="row">1</th>
+          <td>{{capitalizar name}}</td>
+          <td>{{value}}</td>
+        </tr>
+    {{/each}}
   </tbody>
 </table>
+
